@@ -119,7 +119,6 @@ body .wrapper {
 }
 body .wrapper .Sector-1 {
   width: 100%;
-  height: 91vh;
   background-color: white;
   display: flex;
   flex-direction: row;
@@ -177,15 +176,26 @@ body .wrapper .Sector-1 .right-sector-1 h2 {
 }
 body .wrapper .Sector-2 {
   background-color: white;
-  padding: 3rem 5rem;
+  padding: 5rem;
 }
 body .wrapper .Sector-2 h1 {
   padding-bottom: 2rem;
+  font-weight: 700;
+}
+body .wrapper .Sector-2 .artikel-lainnya a {
+  float: right;
+  color: #4F4F4F;
+  text-decoration: none;
+  padding: 2rem;
+}
+body .wrapper .Sector-2 .artikel-lainnya a:hover {
+  color: #699BF7;
 }
 body .wrapper .Sector-2 .agenda-container {
   display: flex;
   justify-content: space-evenly;
   gap: 20px;
+  box-sizing: border-box;
   flex-wrap: wrap;
 }
 body .wrapper .Sector-2 .agenda-container .card-agenda {
@@ -201,4 +211,40 @@ body .wrapper .Sector-2 .agenda-container .card-agenda img {
   height: 30rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+body .wrapper .Sector-3 {
+  background-color: rgb(143, 173, 144);
+  padding: 5rem;
+}
+body .wrapper .Sector-3 h1 {
+  padding-bottom: 2rem;
+  color: white;
+  font-weight: 700;
+}
+body .wrapper .Sector-3 .container-media-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 28rem));
+  grid-template-rows: repeat(3, 28rem);
+  gap: 25px;
+  justify-content: center;
+  grid-template-areas: "c1 m m" "c2 c3 c4" "c5 c6 c7";
+}
+body .wrapper .Sector-3 .container-media-card .c1,
+body .wrapper .Sector-3 .container-media-card .c2,
+body .wrapper .Sector-3 .container-media-card .c3,
+body .wrapper .Sector-3 .container-media-card .c4,
+body .wrapper .Sector-3 .container-media-card .c5,
+body .wrapper .Sector-3 .container-media-card .c6,
+body .wrapper .Sector-3 .container-media-card .c7 {
+  background-color: white;
+  color: white;
+  display: flex;
+  padding: 10px;
+}
+body .wrapper .Sector-3 .container-media-card .m {
+  background-color: white;
+  color: white;
+  display: flex;
+  padding: 10px;
+  grid-area: m;
 }/*# sourceMappingURL=home.css.map */
