@@ -52,7 +52,7 @@ function createCard(card, index) {
     const cardContainer = document.getElementById("cardContainer");
 
     const cardElement = document.createElement("div");
-    cardElement.className = `card mb-3 ${index % 2 === 0 ? 'even' : 'odd'}`;
+    cardElement.className = `card mb-3 article-card-bg-color ${index % 2 === 0 ? 'even' : 'odd'}`;
     cardElement.style = "max-width: 90rem;height:14rem;";
 
     cardElement.innerHTML = `
