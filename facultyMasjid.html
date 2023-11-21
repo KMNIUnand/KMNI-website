@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Paginated Cards</title>
+    <style>
+        .card {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            height: 150px;
+            float: left;
+            box-sizing: border-box;
+        }
+
+        .pagination {
+            clear: both;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app"></div>
+
+    <script>
+        const itemsPerPage = 3; // Number of cards per page
+        let currentPage = 1;
+
+        const content = [
+            "Card 1", "Card 2", "Card 3",
+            "Card 4", "Card 5", "Card 6",
+            "Card 7", "Card 8", "Card 9",
+
+            // Add more cards as needed
+        ];
+
+        function renderPage(pageNumber) {
+            const startIndex = (pageNumber - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const pageContent = content.slice(startIndex, endIndex);
+
+            const appElement = document.getElementById('app');
+            appElement.innerHTML = '';
+
+            pageContent.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.textContent = item;
+                appElement.appendChild(card);
+            });
+
+            renderPagination();
+        }
+
+        function renderPagination() {
+            const totalPages = Math.ceil(content.length / itemsPerPage);
+            const paginationElement = document.createElement('div');
+            paginationElement.className = 'pagination';
+
+            for (let i = 1; i <= totalPages; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.addEventListener('click', () => {
+                    currentPage = i;
+                    renderPage(currentPage);
+                });
+
+                paginationElement.appendChild(pageButton);
+            }
+
+            const appElement = document.getElementById('app');
+            appElement.appendChild(paginationElement);
+        }
+
+        // Initial rendering
+        renderPage(currentPage);
+
+    </script>
+</body>
+
+</html>

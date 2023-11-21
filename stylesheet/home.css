@@ -1,0 +1,204 @@
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+body header {
+  width: 100%;
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  align-items: center;
+  z-index: 999;
+  padding: 1rem 1.7rem;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.5s ease;
+}
+body header .wrapper-head {
+  display: flex;
+  flex-direction: row;
+}
+body header .wrapper-head img.head-logo {
+  height: 5.5rem;
+  width: auto;
+}
+body header .wrapper-head .judul-header {
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  align-items: center;
+}
+body header .wrapper-head .judul-header h2 {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+body header .wrapper-head .judul-header h2 span.masjid {
+  color: white;
+}
+body header .wrapper-head .judul-header h2 span.univ {
+  font-weight: 700;
+  font-size: 1.35rem;
+}
+body header nav {
+  display: flex;
+  justify-content: space-around;
+}
+body header nav .nav-code {
+  padding: 1rem;
+  background-color: #E2EEE2;
+  margin-right: 0.8rem;
+  text-align: center;
+  color: #1F1F1F;
+  text-decoration: none;
+  font-weight: 700;
+}
+body .hero {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-image: url("./example.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+body .hero .hero-level-1 {
+  z-index: 3;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body .hero .hero-level-1 img.hero-logo {
+  width: 15rem;
+}
+body .hero .hero-level-1 h2.hero-text-masjid {
+  font-weight: 800;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+body .hero .hero-level-1 h2.hero-text-masjid span.masjid-hero {
+  color: #1F1F1F;
+}
+body .hero .hero-level-1 h2.hero-text-masjid span.MNI-Univ {
+  font-weight: 600;
+  font-size: 2rem;
+  color: white;
+}
+body .hero .hero-level-1 .hero-level-2 {
+  display: flex;
+}
+body .hero .hero-level-1 .hero-level-2 a.map-place {
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  margin-left: 10px;
+  align-items: center;
+}
+body .hero .hero-level-1 .hero-level-2 a.map-place:hover {
+  color: #699BF7;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+body .wrapper {
+  width: 80%;
+  height: 900vh;
+  margin: auto;
+}
+body .wrapper .Sector-1 {
+  width: 100%;
+  height: 91vh;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+body .wrapper .Sector-1 .left-sector-1 {
+  flex: 3;
+  padding: 1rem;
+  height: 100%;
+}
+body .wrapper .Sector-1 .left-sector-1 .article-terbaru {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+body .wrapper .Sector-1 .left-sector-1 .article-terbaru h1 {
+  font-weight: 700;
+  color: #1F1F1F;
+}
+body .wrapper .Sector-1 .left-sector-1 .article-terbaru a {
+  color: #4F4F4F;
+  text-decoration: none;
+}
+body .wrapper .Sector-1 .left-sector-1 .article-terbaru a:hover {
+  color: #699BF7;
+}
+body .wrapper .Sector-1 .left-sector-1 .article-container {
+  display: flex;
+  overflow-y: scroll;
+  gap: 5rem;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #4F4F4F;
+  padding: 0 4rem;
+  height: 10%;
+}
+body .wrapper .Sector-1 .right-sector-1 {
+  flex: 1;
+  background-color: rgb(143, 173, 144);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-evenly;
+  padding: 4rem 2rem;
+}
+body .wrapper .Sector-1 .right-sector-1 h2 {
+  padding: 1rem;
+  color: white;
+  font-weight: 700;
+  border-radius: 10px;
+}
+body .wrapper .Sector-2 {
+  background-color: white;
+  padding: 3rem 5rem;
+}
+body .wrapper .Sector-2 h1 {
+  padding-bottom: 2rem;
+}
+body .wrapper .Sector-2 .agenda-container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+body .wrapper .Sector-2 .agenda-container .card-agenda {
+  min-width: 20rem;
+  height: 50rem;
+  flex-wrap: wrap;
+  flex: 1;
+  background-color: #E2EEE2;
+  border-radius: 8px;
+}
+body .wrapper .Sector-2 .agenda-container .card-agenda img {
+  border: 10px solid rgb(143, 173, 144);
+  height: 30rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=home.css.map */

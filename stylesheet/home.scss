@@ -1,0 +1,253 @@
+$lightgreen : #8DAD8E;
+$primary : rgb(143, 173, 144);
+$secondary : #E2EEE2;
+$background-1 : #D9D9D9;
+$background-2 : white;
+$icon : #699BF7;
+$font-1 : #1F1F1F;
+$font-2 : #ECECEC;
+$disable-font : #4F4F4F;
+$red-map : #A90F0F;
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+
+    header {
+        width: 100%;
+        display: flex;
+        position: fixed;
+        flex-direction: row;
+        align-items: center;
+        z-index: 999;
+        padding: 1rem 1.7rem;
+        justify-content: space-between;
+        background-color: rgba(0, 0, 0, 0);
+        transition: background-color 0.5s ease;
+
+        .wrapper-head {
+            display: flex;
+            flex-direction: row;
+
+            img.head-logo {
+                height: 5.5rem;
+                width: auto;
+            }
+
+            .judul-header {
+                margin-left: 2rem;
+                margin-top: 0.7rem;
+                align-items: center;
+
+                h2 {
+                    font-weight: 800;
+                    font-size: 1.5rem;
+
+                    span.masjid {
+                        color: white;
+                    }
+
+                    span.univ {
+                        font-weight: 700;
+                        font-size: 1.35rem;
+                    }
+                }
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+
+            .nav-code {
+                padding: 1rem;
+                background-color: $secondary;
+                margin-right: 0.8rem;
+                text-align: center;
+                color: $font-1;
+                text-decoration: none;
+                font-weight: 700;
+            }
+        }
+    }
+
+    .hero {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+        background-image: url("./example.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .hero-level-1 {
+            z-index: 3;
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img.hero-logo {
+                width: 15rem;
+            }
+
+            h2.hero-text-masjid {
+                font-weight: 800;
+                width: 100%;
+                text-align: center;
+                color: white;
+
+                span.masjid-hero {
+                    color: $font-1;
+                }
+
+                span.MNI-Univ {
+                    font-weight: 600;
+                    font-size: 2rem;
+                    color: white;
+                }
+            }
+
+            .hero-level-2 {
+                display: flex;
+
+                a.map-place {
+                    text-decoration: none;
+                    font-weight: 500;
+                    color: white;
+                    margin-left: 10px;
+                    align-items: center;
+                }
+
+                a.map-place:hover {
+                    color: #699BF7;
+                }
+            }
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); // Black with 20% alpha
+        z-index: 1;
+    }
+
+    .wrapper {
+        width: 80%;
+        height: 900vh;
+        margin: auto;
+
+        .Sector-1 {
+            width: 100%;
+            height: 91vh;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            overflow: hidden;
+
+            .left-sector-1 {
+                flex: 3;
+                padding: 1rem;
+                height: 100%;
+
+                .article-terbaru {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 2rem;
+
+                    h1 {
+                        font-weight: 700;
+                        color: $font-1;
+                    }
+
+                    a {
+                        color: $disable-font;
+                        text-decoration: none;
+                    }
+
+                    a:hover {
+                        color: #699BF7;
+                    }
+
+                }
+
+                .article-container {
+                    display: flex;
+                    overflow-y: scroll;
+                    gap: 5rem;
+                    flex-direction: column;
+                    overflow: hidden;
+                    background-color: #4F4F4F;
+                    padding: 0 4rem;
+                    height: 10%;
+                }
+            }
+
+            .right-sector-1 {
+                flex: 1;
+                background-color: $primary;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+                justify-content: space-evenly;
+                padding: 4rem 2rem;
+
+                h2 {
+                    padding: 1rem;
+                    color: white;
+                    font-weight: 700;
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .Sector-2 {
+            background-color: white;
+            padding: 3rem 5rem;
+
+            h1 {
+                padding-bottom: 2rem;
+            }
+
+            .agenda-container {
+                display: flex;
+                justify-content: space-evenly;
+                gap: 20px;
+                flex-wrap: wrap;
+
+                .card-agenda {
+                    min-width: 20rem;
+                    height: 50rem;
+                    flex-wrap: wrap;
+                    flex: 1;
+                    background-color: $secondary;
+                    border-radius: 8px;
+
+                    img {
+                        border: 10px solid $primary;
+                        height: 30rem;
+                        object-fit: cover;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
