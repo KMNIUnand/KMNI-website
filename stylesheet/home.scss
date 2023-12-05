@@ -277,35 +277,23 @@ body {
             }
 
             .container-media-card {
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(15rem, 28rem));
-                grid-template-rows: repeat(3, 28rem);
-                gap: 25px;
-                justify-content: center;
-                grid-template-areas:
-                    "c1 m m"
-                    "c2 c3 c4"
-                    "c5 c6 c7";
+                display: flex;
+                flex-wrap: wrap;
 
-                .c1,
-                .c2,
-                .c3,
-                .c4,
-                .c5,
-                .c6,
-                .c7 {
+                .media-card {
+                    width: calc(60% + 20px);
+                    aspect-ratio: 2/1;
+                    Margin: 10px;
                     background-color: white;
-                    color: white;
-                    display: flex;
-                    padding: 11px;
+                    border-radius: 2px;
                 }
 
-                .m {
+                .layanan-card {
+                    width: 30%;
+                    aspect-ratio: 1/1;
+                    Margin: 10px;
                     background-color: white;
-                    color: white;
-                    display: flex;
-                    padding: 11px;
-                    grid-area: m;
+                    border-radius: 2px;
                 }
             }
         }

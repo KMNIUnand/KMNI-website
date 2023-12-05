@@ -1,49 +1,194 @@
-<!DOCTYPE html>
-<html lang="en">
+<style type="text/css">
+    .dropdown-section1 {
+        border-radius: 3px;
+        width: 100%;
+        margin: 0 auto;
+        background: #607d8b;
+        height: 38px;
+        color: #000;
+        -webkit-box-shadow: 0 3px 4px 0 rgba(50, 50, 50, .6);
+        -moz-box-shadow: 0 3px 4px 0 rgba(50, 50, 50, .6);
+        box-shadow: 0 3px 4px 0 rgba(50, 50, 50, .6);
+    }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        /* Container styling */
-        .container {
-            display: flex;
-            justify-content: space-around;
-            /* Mengatur ruang di sekitar dua bagian */
-            align-items: center;
-            /* Mengatur pemusatannya secara vertikal */
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
+    .dropdown-section1 .menu {
+        margin-bottom: 20px;
+    }
 
-        /* Section styling */
-        .section {
-            flex: 1;
-            /* Bagian akan mengambil ruang yang tersedia secara merata */
-            padding: 20px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-    </style>
-    <title>Flexbox Example</title>
-</head>
+    .dropdown-section1 .menu li a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+    }
 
-<body>
+    .dropdown-section1 .menu li {
+        list-style: none;
+        float: left;
+        padding: 10px;
+        background: #607d8b;
+    }
 
-    <div class="container">
-        <div class="section">
-            <!-- Konten Bagian 1 -->
-            <h2>Bagian 1</h2>
-            <p>Isi dari bagian pertama.</p>
-        </div>
+    .dropdown-section1 .menu li:last-child {
+        border-right: none !important;
+    }
 
-        <div class="section">
-            <!-- Konten Bagian 2 -->
-            <h2>Bagian 2</h2>
-            <p>Isi dari bagian kedua.</p>
-        </div>
-    </div>
+    .dropdown-section1 .menu .sub-menu li {
+        float: none;
+        margin-bottom: 0px;
+        padding: 10px;
+    }
 
-</body>
+    .dropdown-section1 .sub-menu {
+        display: none;
+        position: absolute;
+        z-index: 100;
+        /* width:100px; */
+        margin-left: -50px !important;
+        margin-top: 10px !important;
+    }
 
-</html>
+    .dropdown-section1 .menu li:hover>.sub-menu {
+        display: block;
+        width: 150px;
+    }
+
+    .dropdown-section1 .menu li:hover {
+        background: #94c018;
+    }
+
+    .dropdown-section1 .place-right {
+        left: 200px;
+        top: 27px;
+    }
+
+    .dropdown-section1 .topper {
+        left: 200px;
+        top: -10px;
+    }
+
+    .dropdown-section1 .place-right-SD {
+        left: 200px;
+        bottom: 19px;
+    }
+
+    .dropdown-section1 .lower {
+        left: 200px;
+        bottom: -58px;
+    }
+
+    .tabs-inner .widget li a {
+        padding: none !important;
+        font: none !important;
+    }
+</style>
+
+<div class="dropdown-section1">
+    <ul class="menu">
+        <li><a href="https://muhammadre-212001.blogspot.com/2023/07/bahan-presentasi-untuk-mata-kuliah.html"
+                title="Home">Home</a></li>
+        <li><a href="#" title="Category">Elektronika</a>
+            <ul class="sub-menu">
+                <li><a href="#">Materi</a>
+                    <ul class="sub-menu topper">
+                        <li><a
+                                href="https://muhammadre-212001.blogspot.com/p/sub-bab-151-constant-gain-multiplier.html">15.1
+                            </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Rangkaian </a>
+                    <ul class="sub-menu place-right">
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/komparator-inverting-vref.html">Komparator
+                                Inverting</a></li>
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/aplikasi-low-pass-filter-20dbdec.html">LPF
+                                -20dB/dec</a></li>
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/sinus-1.html">Generator Sinus</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://muhammadre-212001.blogspot.com/p/tugas-besar-proteksi-pompa-air.html">TB -
+                        Proteksi Pompa Air</a></li>
+            </ul>
+        </li>
+        <li><a href="#" title="Category">Sistem Digital</a>
+            <ul class="sub-menu">
+                <li><a href="#">Materi sub-chapter</a>
+                    <ul class="sub-menu topper">
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/materi-76.html">7.6 </a></li>
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/chapter-10.html">10.5 </a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Soal</a>
+                    <ul class="sub-menu place-right-SD">
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/soal-74.html">Soal 7.4</a></li>
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/soal-84.html">Soal 8.4</a></li>
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/soal-104.html">Soal 10.4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Aplikasi</a>
+                    <ul class="sub-menu lower">
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/aplikasi-encoder-decoder.html">Encoder-Decoder
+                            </a></li>
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/aplikasi-mux-demux.html">Mux-Demux </a>
+                        </li>
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/aplikasi-flipflop.html">Flip-Flop </a>
+                        </li>
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/aplikasi-aritmatika.html">Aritmetika </a>
+                        </li>
+
+                    </ul>
+                </li>
+                <li><a href="https://muhammadre-212001.blogspot.com/p/tb.html">TB - Smart greenhouse semi hidroponik</a>
+                </li>
+            </ul>
+        </li>
+
+        <li><a href="#" title="Category">uP dan uC</a>
+            <ul class="sub-menu">
+                <li><a href="#">Modul 1</a></li>
+                <li><a href="#">Modul 2</a></li>
+                <li><a href="#">Modul 3</a></li>
+                <li><a href="#">Tugas Besar</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#" title="Category">Praktikum</a>
+            <ul class="sub-menu">
+                <li><a href="#">Sistem Digital</a>
+                    <ul class="sub-menu topper">
+                        <li><a
+                                href="https://muhammadre-212001.blogspot.com/p/modul-i-gerbang-logika-dasar-monostable.html">Modul
+                                1 </a>
+
+                        </li>
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/modul-2.html">Modul 2 </a></li>
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/modul-3.html">Modul 3 </a></li>
+                        <li><a href="https://muhammadre-212001.blogspot.com/p/modul-4.html">Modul 4 </a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Comming soon</a>
+                    <ul class="sub-menu place-right-SD">
+                        <li><a href="">Comming soon</a></li>
+                        <li><a href="">Comming soon</a></li>
+                        <li><a href="">Comming soon4</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Comming soon</a>
+                    <ul class="sub-menu lower">
+                        <li><a href="">Comming soon</a></li>
+                        <li><a href="">Comming soon</a></li>
+                        <li><a href="">Comming soon</a></li>
+                        <li><a href="">Comming soon </a></li>
+
+                    </ul>
+                </li>
+                <li><a href="">Comming soon</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#p/about-me.html" title="About Me">About</a>
+        </li>
+        <li><a href="#" title="Contact Me">Reach Me</a></li>
+
+
+    </ul>
+</div>

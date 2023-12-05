@@ -222,29 +222,20 @@ body .wrapper .Sector-3 h1 {
   font-weight: 700;
 }
 body .wrapper .Sector-3 .container-media-card {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 28rem));
-  grid-template-rows: repeat(3, 28rem);
-  gap: 25px;
-  justify-content: center;
-  grid-template-areas: "c1 m m" "c2 c3 c4" "c5 c6 c7";
-}
-body .wrapper .Sector-3 .container-media-card .c1,
-body .wrapper .Sector-3 .container-media-card .c2,
-body .wrapper .Sector-3 .container-media-card .c3,
-body .wrapper .Sector-3 .container-media-card .c4,
-body .wrapper .Sector-3 .container-media-card .c5,
-body .wrapper .Sector-3 .container-media-card .c6,
-body .wrapper .Sector-3 .container-media-card .c7 {
-  background-color: white;
-  color: white;
   display: flex;
-  padding: 11px;
+  flex-wrap: wrap;
 }
-body .wrapper .Sector-3 .container-media-card .m {
+body .wrapper .Sector-3 .container-media-card .media-card {
+  width: calc(60% + 20px);
+  aspect-ratio: 2/1;
+  Margin: 10px;
   background-color: white;
-  color: white;
-  display: flex;
-  padding: 11px;
-  grid-area: m;
+  border-radius: 2px;
+}
+body .wrapper .Sector-3 .container-media-card .layanan-card {
+  width: 30%;
+  aspect-ratio: 1/1;
+  Margin: 10px;
+  background-color: white;
+  border-radius: 2px;
 }/*# sourceMappingURL=home.css.map */
